@@ -19,6 +19,7 @@ export class PostComponent {
     /**to retrieve posts from the API */
     this.http.get('https://jsonplaceholder.typicode.com/posts').subscribe((posts:any)=>{
       console.log(posts);
+      this.posts = posts;
     });
   }
 }
