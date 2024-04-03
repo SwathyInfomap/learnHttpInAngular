@@ -25,10 +25,20 @@ export class PostComponent {
   //     this.posts = posts;
   //   });
   // }
+  // loadPosts(){
+  //   this.postService.getPosts().subscribe((posts:any)=>{
+  //     console.log(posts);
+  //     this.posts = posts;
+  //   })
+  // }
+
   loadPosts(){
-    this.postService.getPosts().subscribe((posts:any)=>{
-      console.log(posts);
-      this.posts = posts;
+    this.postService.getPosts().subscribe({
+      next : (posts:any)=>{
+        this.posts = posts;
+        console.log('Posts fetched successfully');
+      },
+      error:(error) => console.log('Error fetching posts:',error)
     })
   }
 }

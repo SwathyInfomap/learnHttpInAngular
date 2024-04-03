@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
-const BASE_URL = 'https://jsonplaceholder.typicode.com/posts?_limit=10';
+const BASE_URL = 'https://jsonplaceholder.typicode.com/postsssss?_limit=10';
 @Injectable({
   providedIn: 'root'
 })
